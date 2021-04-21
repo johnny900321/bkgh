@@ -1,0 +1,49 @@
+import  os
+import numpy as np
+import pandas as pd
+from google.colab import files
+from mpl_toolkits.basemap import Basemap
+from matplotlib import animation
+import matplotlib.pyplot as plt
+%matplotlib inline
+import seaborn as sns
+import requests
+
+[6]pkgo.shape
+[7]print(pkgo 一共有资料本,) 個資料位',format(pkgo.shape[], pkgo.shape[]
+[8]pkgo.head(1)
+[9] print('before set  options
+:', pd. get_option(' display, max columns'))
+pd. set_option('display.max_columns', pkgo.shape[1])
+print('after set options
+:', pd. get_option(' display. max_columns'))
+pkgo. head(1)
+[10]pkgo.columns.values
+
+[11]view_list = ['latitude', 'longitude',
+' appearedLocalTime',
+'terrainType',
+closeTollater',
+temperature', 'windSpeed', 'class']
+
+[23]pkgo_location=pkgo(('city','latitude', 'longitude']].head(10) 
+[24] pkgo_location
+pkgol'city'1.valuecounts
+
+[19] pd. DataFrame (pkgo[' city']. value_counts0)). loc["Taipei", :]
+[20] map_plot (pkgoโpkgo.city-"Taipei"])
+
+pd. DataFrame(pkgo[' city']. value_counts0).loc["New York",
+pkgo = pkgo[pkgo.city='New_York']
+map_plot (pkgo)
+
+[28]
+sns.jointplot(x='longitude',ylatitude,data-pkgo 
+
+[29] pkgo = pkgo[ (-90 < pkgo['longitude']) & (pkgo['longitude'] < -50) &
+(20 < pkgo['latitude'])& (pkgo('latitude']< 50)]
+map_plot(pkgo)
+
+[30]pokemons = [pkgo[pkgo['class']=(1)] for i in [4, 43, 56, 71, 98]]
+pkgo = pd.concat(pokemons)
+map_plot(pkgo)
